@@ -11,6 +11,7 @@ namespace SimplestarGame.Water
         void Start()
         {
             this.waterMaterial = this.GetComponent<Renderer>().material;
+            mainCamera = Camera.main.transform;
         }
 
         // Update is called once per frame
