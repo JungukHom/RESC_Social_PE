@@ -14,7 +14,8 @@
 
     public class Hand : MonoBehaviour
     {
-        public SteamVR_Action_Boolean m_GrabAction = null;
+        public SteamVR_Action_Boolean m_Triggerction = null;
+        public SteamVR_Action_Boolean m_TouchpadAction = null;
 
         private SteamVR_Behaviour_Pose m_Pose = null;
         private FixedJoint m_Joint = null;
@@ -31,13 +32,13 @@
 
         private void Update()
         {
-            if (m_GrabAction.GetStateDown(m_Pose.inputSource))
+            if (m_Triggerction.GetStateDown(m_Pose.inputSource))
             {
                 print(m_Pose.inputSource + " Trigger Down");
                 PickUp();
             }
 
-            if (m_GrabAction.GetStateUp(m_Pose.inputSource))
+            if (m_Triggerction.GetStateUp(m_Pose.inputSource))
             {
                 print(m_Pose.inputSource + " Trigger Up");
                 Drop();
